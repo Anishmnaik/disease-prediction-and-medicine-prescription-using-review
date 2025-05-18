@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     body{
+background-image: url("https://static.vecteezy.com/system/resources/previews/023/740/386/large_2x/medicine-doctor-with-stethoscope-in-hand-on-hospital-background-medical-technology-healthcare-and-medical-concept-photo.jpg"); 
+       margin-: 0%;
+       height: 50rem;
+        image-rendering:auto;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+      }
+    nav{
+        padding-top: 20px;
+        height: 50px;
+        width: 100%;
+        background-color:aqua
+        
+      }
+      
+    nav *{
+      display:inline;
+      padding-left: 20px;
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+   <br>
+  {%extends "home.html" %}
+{%block content%}
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+ <div class="card text-center">
+        <div class="card-header">
+        <strong>   Original Entered Review : </strong>
+        </div>
+        <div class="card-body">
+            
+            <p id="new1" class="card-text">
+            
+             {{ rawtext }}
+            </p>
+
+        </div>
+      
+    </div>
+
+
+
+ <br><br>
+
+ <div class="card text-center">
+  <div class="card-header">
+  <strong>   Predicted Medical Condition</strong>
+  </div>
+  <div class="card-body">
+      
+      <p id="new" class="card-text">
+      
+       {{ result }}
+      </p>
+
+   
+
+
+  </div>
+
+</div>
+
+
+   <div class="card text-center">
+        <div class="card-header">
+          <strong> <i class="fas fa-file-export"></i>Top 3 Recommended Drugs:  </strong>
+        </div>
+        <div class="card-body">
+       <table align="center">
+       
+                   <tr>
+                    {% for top_drug in top_drugs %}
+                        <th>
+                        
+                        
+                          
+                 <p class="round1">{{ top_drug }}</p>
+               
+                     
+                        </th>
+                        {% endfor %}
+                </tr>
+       
+        </table>
+
+        <div class="card text-center">
+          <div class="card-header">
+          <strong>   Sentiment Analysis of Review</strong>
+          </div>  
+        </div>
+        <div class="card-body">
+      
+          <p id="new2" class="card-text">
+          
+           {{ variable }}
+          </p>
+    
+       
+    
+    
+      </div>
+        </div>
+      
+    </div>
+
+
+    <br><br>
+
+    <div class="card text-center">
+     <div class="card-header">
+     <strong>   !!These drugs are only recommendations based on your review, please prescribe he doctor before consuming any drugs!!</strong>
+     </div>  
+   </div>
+{% endblock %}
+<footer style="background-color:#0d1b2a; color:white; padding:40px 20px; font-family:Arial, sans-serif;">
+  <div style="display:flex; flex-wrap:wrap; justify-content:space-between; max-width:1200px; margin:auto;">
+    
+    <!-- About -->
+    <div style="flex:1 1 200px; margin:20px;">
+      <h3>Disease Predictor</h3>
+      <p>Smart platform for predicting diseases and suggesting suitable medications using AI.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex:1 1 150px; margin:20px;">
+      <h4>Quick Links</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="../templates/home.html" style="color:white; text-decoration:none;">Home</a></li>
+        <li><a href="../templates/about.html" style="color:white; text-decoration:none;">About</a></li>
+        <li><a href="../templates/home.html" style="color:white; text-decoration:none;">Predict Disease</a></li>
+        <li><a href="../templates/service.html" style="color:white; text-decoration:none;">service</a></li>
+
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div style="flex:1 1 200px; margin:20px;">
+      <h4><a href="../templates/contact.html" style="text-decoration: none; color: white;">Contact Us</a></h4>
+      
+    </div>
+
+    <!-- Legal -->
+    <div style="flex:1 1 200px; margin:20px;">
+      <h4>Legal</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="/privacy" style="color:white; text-decoration:none;">Privacy Policy</a></li>
+        <li><a href="/terms" style="color:white; text-decoration:none;">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr style="border-top:1px solid #ccc; margin:30px 0;">
+
+  <p style="text-align:center; margin:0;">© 2025 Disease Predictor. All rights reserved.</p>
+</footer>
+<footer style="background-color:#0d1b2a; color:white; padding:40px 20px; font-family:Arial, sans-serif;">
+  <div style="display:flex; flex-wrap:wrap; justify-content:space-between; max-width:1200px; margin:auto;">
+    
+    <!-- About -->
+    <div style="flex:1 1 200px; margin:20px;">
+      <h3>Disease Predictor</h3>
+      <p>Smart platform for predicting diseases and suggesting suitable medications using AI.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex:1 1 150px; margin:20px;">
+      <h4>Quick Links</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="/home" style="color:white; text-decoration:none;">Home</a></li>
+        <li><a href="/about" style="color:white; text-decoration:none;">About</a></li>
+        <li><a href="/home" style="color:white; text-decoration:none;">Predict Disease</a></li>
+        <li><a href="/service" style="color:white; text-decoration:none;">service</a></li>
+
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div style="flex:1 1 200px; margin:20px;">
+      <h4><a href="/contact" style="text-decoration: none; color: white;">Contact Us</a></h4>
+      
+    </div>
+
+    <!-- Legal -->
+    <div style="flex:1 1 200px; margin:20px;">
+      <h4>Legal</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="/privacy" style="color:white; text-decoration:none;">Privacy Policy</a></li>
+        <li><a href="/terms" style="color:white; text-decoration:none;">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr style="border-top:1px solid #ccc; margin:30px 0;">
+
+  <p style="text-align:center; margin:0;">© 2025 Disease Predictor. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+

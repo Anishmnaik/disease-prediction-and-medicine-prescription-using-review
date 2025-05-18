@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        div{
+    margin-top: 10rem;
+    margin-left: 600px;
+    margin-right: 550px;  
+    height: 20rem;
+    background-color: rgb(138, 234, 111);
+    border-radius: 3rem;
+}
+
+a{
+    padding-left: 70px;
+    color: rgb(245, 244, 244);
+}
+    </style>
+</head>
+<body>
+
+<div>
+    <form action="/home" ><br>
+    <H1 style="padding-left: 7rem;">LOGIN</H1><br>
+     <LABEL FOR="username" style="padding-left:3rem;">USERNAME</LABEL>
+     <input type="text" id="username" name="username" placeholder="enter your username" required style="border-radius: 5rem; padding-left:50px ;">
+     <br>
+     <br>
+     <label for="label"style="padding-left:3rem;">PASSWORD </label>
+    <input type="password"  id="password"  name="password" placeholder="enter a strong password" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}" title="password does not match" style="border-radius: 5rem; padding-left:50px ;">  <br><br><br>
+    
+     <input type="submit" value="login" style="margin-left: 150px; margin-left: 10rem; height: 2rem; width: 4rem; background-color: blue; border-radius: 1rem;"><br><br>
+     <a href="/register" style="padding-left: 3rem;">don't have an account then register?</a>
+
+    </form>
+</div>
+</body>
+</html>

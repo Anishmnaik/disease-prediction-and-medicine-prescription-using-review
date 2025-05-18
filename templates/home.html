@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="doc.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+         <link rel="icon" type="image/png" href="{{url_for('static', filename='images/login1.png')}}">
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+
+   <title>Patients' condition classification and drug recommendation based on drug review</title>
+
+<style>
+        .highlight {background-color: #FFFF00}
+
+        div {
+  font-size: 20px;
+}
+    </style>
+    <script src="/scripts/snippet-javascript-console.min.js?v=1"></script>
+
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='images/icons/favicon_new.ico')}}">
+
+   
+   <style>
+     
+     
+        .form-actions {
+            margin: 0;
+            background-color: transparent;
+            text-align: center;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar-custom {
+    background-color: #00008B;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #ffffff;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #ffffff;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    
+    color: #ffff00;
+}
+
+.table {
+   margin: auto;
+   width: 50% !important; 
+}
+    </style>
+    <style> 
+#rcorners1 {
+  border-radius: 10px;
+  background : #7A82FE;
+  padding: 10px; 
+  display:inline-block;
+  height: 2;
+  color:white;
+ 
+}
+
+#rcorners2 {
+  
+  
+  padding: 10px; 
+  display:inline-block;
+  height: 2;
+  
+ 
+}
+
+p.round1 {
+  
+  border-radius: 8px;
+  
+  padding:3px;
+  
+  text-align:center;
+  color:black;
+  background:#0C95F7;
+}
+
+p.round2 {
+  
+  border-radius: 8px;
+  
+  padding:3px;
+  
+  text-align:center;
+  color:black;
+  background:#FC8F7D;
+}
+p.round3 {
+  
+  border-radius: 8px;
+ 
+  padding:3px;
+  
+  text-align:center;
+  color:black;
+  background:#2EEAFE;
+}
+
+
+#div_top_hypers {
+    background-color:white;
+    display:inline;      
+}
+#ul_top_hypers {
+   
+   min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+}
+
+#ul_top_hypers li{
+   
+    display: inline;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+ table, th
+            {
+                
+                padding: 5px;
+                font-family:Verdana;
+                font-size:20px;
+                text-align: left;
+                font-weight:normal;
+            }
+
+ul.horizontal-style {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li.horizontal-style {
+  float: center;
+}
+
+li.new-style {
+  float: right;
+}
+#color{
+    background-color: rgb(195, 241, 226);
+}
+
+
+li.horizontal-style a{
+  display: block;
+  color: black;
+  
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+ 
+
+</style>   
+    <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<style>
+  
+</style>
+    <style>
+        body{
+background-image: url("https://as2.ftcdn.net/v2/jpg/04/24/30/93/1000_F_424309320_UkOxg2z3sq7yXwGnWCO6xBXkRI4byhnI.jpg");    
+    margin: 0%;
+    height: 100%;
+      image-rendering: auto;
+background-size: cover;
+background-position: bottom;
+      }
+        #d{
+            height: 45rem;
+            background-image: url("https://storage.googleapis.com/aims-edu/images/000/001/496/lead/team-young-specialist-doctors-standing-corridor-hospital.jpg" );
+            opacity: 0.5;
+            margin-top: 0px;
+ }
+        nav{
+        padding-top: 20px;
+        height: 50px;
+        width: 100%;
+        opacity: 0.8;
+        background-color: aqua;
+        padding-top: 5px;
+
+      }
+    nav *{
+      display:inline;
+      padding-left: 20px;
+      text-decoration: none;
+      color: black;
+    }
+    </style>
+</head>
+<body>
+    <div id="d" >
+        <nav >
+            <h3>SAS</h3>
+            <ul>
+              <li >
+                <a   href="/contact">contact</a>
+              </li>
+              <li >
+                <a  href="/about">about</a>
+              </li>
+              <li >
+                <a href="/service">service</a>
+              </li>
+             <li >
+        <a href="/" style="padding-left: 50rem; ">logout</a>
+      </li>
+              
+    
+            </ul>
+          </nav>
+          <h1 style="padding-top: 5rem; text-align: center; color: white;">Patient's condition classification and drug recommendation <br> based on drug review</h1>
+</div>
+
+
+
+<div id="color">
+
+
+
+<br>
+
+
+
+<br> 
+
+<br>
+
+<form class="container" method="POST" action="/predict" enctype = "multipart/form-data">
+
+<div class="form-group">
+    <label for="exampleFormControlInput1" class="font-weight-bold" style="padding-left: 15rem;">Enter the Drug review ( Also, enter some of your symptoms and issues )</label>
+
+    <textarea rows="5" cols="5" required="true" name="rawtext" class="form-control">
+</textarea> 
+    
+</div>
+
+<br><br>
+
+
+<div class="form-actions">
+    <button type="submit" class="btn btn-primary btn-lg" type="submit" >Predict</button>
+</div>
+<br><br>
+
+
+
+</form>
+
+{% if show_predictions_modal %}
+
+<div class="card text-center" >
+    <div class="card-header">
+       Alert !!!
+    </div>
+    <div class="card-body">
+        
+        <p id="old" class="card-text">
+        
+         {{ err }}
+
+         <form action="/proceed" method="POST">
+<button type="submit" name="view" value="Proceed"
+                        formmethod="post">Proceed</button>
+                        
+            </form>            
+        </p>
+
+    </div>
+  
+</div>
+
+{% endif %}
+
+{% block content %}
+{% endblock %}
+<br><br>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js "
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous ">
+    </script> 
+
+
+  
+  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+<footer style="background-color:#0d1b2a; color:white; padding:40px 20px; font-family:Arial, sans-serif;">
+  <div style="display:flex; flex-wrap:wrap; justify-content:space-between; max-width:1200px; margin:auto;">
+    
+    <!-- About -->
+    <div style="flex:1 1 200px; margin:20px;">
+      <h3>Disease Predictor</h3>
+      <p>Smart platform for predicting diseases and suggesting suitable medications using AI.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex:1 1 150px; margin:20px;">
+      <h4>Quick Links</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="/home" style="color:white; text-decoration:none;">Home</a></li>
+        <li><a href="/about" style="color:white; text-decoration:none;">About</a></li>
+        <li><a href="/home" style="color:white; text-decoration:none;">Predict Disease</a></li>
+        <li><a href="/service" style="color:white; text-decoration:none;">service</a></li>
+
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div style="flex:1 1 200px; margin:20px;">
+      <h4><a href="/contact" style="text-decoration: none; color: white;">Contact Us</a></h4>
+      
+    </div>
+
+    <!-- Legal -->
+    <div style="flex:1 1 200px; margin:20px;">
+      <h4>Legal</h4>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="/privacy" style="color:white; text-decoration:none;">Privacy Policy</a></li>
+        <li><a href="/terms" style="color:white; text-decoration:none;">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr style="border-top:1px solid #ccc; margin:30px 0;">
+
+  <p style="text-align:center; margin:0;">© 2025 Disease Predictor. All rights reserved.</p>
+
+</body>
+</html>
